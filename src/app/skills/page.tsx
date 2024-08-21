@@ -6,6 +6,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from '@/components/ui/tooltip';
+import { motion } from 'framer-motion';
 import {
   FaCss3,
   FaGit,
@@ -81,34 +82,43 @@ const skills = {
 
 const SkillsPage = () => {
   return (
-    <div className="w-full h-full px-52">
-      <div className="flex flex-col gap-[30px]">
-        <div className="flex flex-col gap-[30px] text-center xl:text-left">
-          <h3 className="text-4xl font-bold">{skills.title}</h3>
-          <p className="max-w-[1000px] text-wrap mx-auto xl:mx-0">
-            {skills.description}
-          </p>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{
+        opacity: 1,
+        transition: { delay: 1.6, duration: 0.4, ease: 'easeIn' },
+      }}
+      className="mb-8"
+    >
+      <div className="w-full h-full px-52">
+        <div className="flex flex-col gap-[30px]">
+          <div className="flex flex-col gap-[30px] text-center xl:text-left">
+            <h3 className="text-4xl font-bold">{skills.title}</h3>
+            <p className="max-w-[1000px] text-wrap mx-auto xl:mx-0">
+              {skills.description}
+            </p>
+          </div>
+          <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:gap-[30px] gap-5">
+            {skills.skillList.map((skill, index) => (
+              <li key={index}>
+                <TooltipProvider delayDuration={100}>
+                  <Tooltip>
+                    <TooltipTrigger className="w-full h-[150px] bg-[#232329] rounded-xl flex justify-center items-center group">
+                      <div className="text-6xl group-hover:text-accent transition-all duration-500">
+                        {skill.icon}
+                      </div>
+                    </TooltipTrigger>
+                    <TooltipContent className="capitalize">
+                      <p>{skill.name}</p>
+                    </TooltipContent>
+                  </Tooltip>
+                </TooltipProvider>
+              </li>
+            ))}
+          </ul>
         </div>
-        <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:gap-[30px] gap-5">
-          {skills.skillList.map((skill, index) => (
-            <li key={index}>
-              <TooltipProvider delayDuration={100}>
-                <Tooltip>
-                  <TooltipTrigger className="w-full h-[150px] bg-[#232329] rounded-xl flex justify-center items-center group">
-                    <div className="text-6xl group-hover:text-accent transition-all duration-500">
-                      {skill.icon}
-                    </div>
-                  </TooltipTrigger>
-                  <TooltipContent className="capitalize">
-                    <p>{skill.name}</p>
-                  </TooltipContent>
-                </Tooltip>
-              </TooltipProvider>
-            </li>
-          ))}
-        </ul>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
