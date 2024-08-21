@@ -17,6 +17,7 @@ import {
 import {
   SiMongodb,
   SiNextdotjs,
+  SiPostman,
   SiPrisma,
   SiTailwindcss,
   SiTypescript,
@@ -25,7 +26,7 @@ import {
 const skills = {
   title: 'My Skills',
   description:
-    "These are the web dev tools with which I've worked the most and are very comfortable using",
+    "These are the web dev tools with which I've worked the most and are my go to tools as of right now.",
   skillList: [
     {
       icon: <FaHtml5 />,
@@ -71,6 +72,10 @@ const skills = {
       icon: <FaGithub />,
       name: 'github',
     },
+    {
+      icon: <SiPostman />,
+      name: 'postman',
+    },
   ],
 };
 
@@ -80,7 +85,7 @@ const SkillsPage = () => {
       <div className="flex flex-col gap-[30px]">
         <div className="flex flex-col gap-[30px] text-center xl:text-left">
           <h3 className="text-4xl font-bold">{skills.title}</h3>
-          <p className="max-w-[600px] text-wrap mx-auto xl:mx-0">
+          <p className="max-w-[1000px] text-wrap mx-auto xl:mx-0">
             {skills.description}
           </p>
         </div>
