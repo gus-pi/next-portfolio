@@ -28,7 +28,7 @@ const info = [
   },
   {
     icon: <FaMapMarkerAlt />,
-    title: 'Locationne',
+    title: 'Location',
     description: 'Cochabamba, Bolivia',
   },
 ];
