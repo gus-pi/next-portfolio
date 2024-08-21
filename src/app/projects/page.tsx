@@ -148,6 +148,7 @@ const ProjectsPage = () => {
                       <Image
                         src={project.image}
                         fill
+                        sizes="100%"
                         className="object-cover"
                         alt=""
                       />
