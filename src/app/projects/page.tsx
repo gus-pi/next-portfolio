@@ -10,7 +10,6 @@ import {
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Swiper as SwiperType } from 'swiper/types';
 import 'swiper/css';
-import { Description } from '@radix-ui/react-dialog';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { useState } from 'react';
