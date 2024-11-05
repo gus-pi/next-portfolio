@@ -7,15 +7,24 @@ type SocialProps = {
 };
 
 const socials = [
-  { icon: <FaGithub />, path: '' },
-  { icon: <FaLinkedin />, path: '' },
+  { icon: <FaGithub />, path: 'https://github.com/gus-pi' },
+  {
+    icon: <FaLinkedin />,
+    path: 'https://www.linkedin.com/in/gustavo-pinedo-b320108a/',
+  },
 ];
 
 const Social = ({ containerStyles, iconStyles }: SocialProps) => {
   return (
     <div className={containerStyles}>
       {socials.map((item, index) => (
-        <Link key={index} href={item.path} className={iconStyles}>
+        <Link
+          key={index}
+          href={item.path}
+          className={iconStyles}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           {item.icon}
         </Link>
       ))}
