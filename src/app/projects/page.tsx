@@ -27,7 +27,7 @@ const projects = [
     stack: [{ name: 'next.js' }, { name: 'typescript' }, { name: 'stripe' }],
     image: '/assets/work/thumb1.png',
     live: 'https://petsoft-navy.vercel.app/',
-    github: 'https://github.com/PieMenard/petsoft',
+    github: 'https://github.com/gus-pi/petsoft',
   },
   {
     num: '02',
@@ -38,7 +38,7 @@ const projects = [
     stack: [{ name: 'next.js' }, { name: 'typescript' }, { name: 'mongodb' }],
     image: '/assets/work/thumb2.PNG',
     live: 'https://next-expenses-blond.vercel.app',
-    github: 'https://github.com/PieMenard/next-expenses',
+    github: 'https://github.com/gus-pi/next-expenses',
   },
   {
     num: '03',
@@ -49,7 +49,7 @@ const projects = [
     stack: [{ name: 'next.js' }, { name: 'typescript' }],
     image: '/assets/work/thumb3.PNG',
     live: 'https://next-moviedb.netlify.app',
-    github: 'https://github.com/PieMenard/next-moviesdb',
+    github: 'https://github.com/gus-pi/next-moviesdb',
   },
 ];
 

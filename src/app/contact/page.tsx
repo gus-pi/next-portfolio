@@ -1,17 +1,5 @@
 'use client';
 
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectLabel,
-  SelectTrigger,
-  SelectValue,
-} from '@/components/ui/select';
-import { Textarea } from '@/components/ui/textarea';
 import { motion } from 'framer-motion';
 import { FaEnvelope, FaMapMarkerAlt, FaPhoneAlt } from 'react-icons/fa';
 
@@ -24,7 +12,14 @@ const info = [
   {
     icon: <FaEnvelope />,
     title: 'Email',
-    description: 'pinedo.m.gustavo@gmail.com',
+    description: (
+      <a
+        href="mailto:pinedo.m.gustavo@gmail.com"
+        className="text-xl text-accent hover:underline"
+      >
+        pinedo.m.gustavo@gmail.com
+      </a>
+    ),
   },
   {
     icon: <FaMapMarkerAlt />,
@@ -46,45 +41,7 @@ const ContactPage = () => {
       <div className="container mx-auto">
         <h3 className="text-4xl text-accent mb-6">Let&apos;s work together</h3>
         <div className="flex flex-col xl:flex-row gap-[30px]">
-          <div className="xl:h-[54%] order-2 xl:order-none">
-            {/* <form
-              action=""
-              className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl"
-            >
-              <h3 className="text-4xl text-accent">Let's work together</h3>
-              <p className="text-white/60">
-                Feel free to contact me about any enquiry or project opportunity
-                you might have, I'm always up to help.
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <Input type="firstname" placeholder="Your first name" />
-                <Input type="lastname" placeholder="Your last name" />
-                <Input type="email" placeholder="Your email address" />
-                <Input type="phone" placeholder="Phone number" />
-              </div>
-              <Select>
-                <SelectTrigger className="w-full">
-                  <SelectValue placeholder="Select a service" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectGroup>
-                    <SelectLabel>Select a service</SelectLabel>
-                    <SelectItem value="est">Fullstack Web Dev</SelectItem>
-                    <SelectItem value="cst">Graphic Design</SelectItem>
-                    <SelectItem value="mst">3D Modeling</SelectItem>
-                    <SelectItem value="pst">Archviz</SelectItem>
-                  </SelectGroup>
-                </SelectContent>
-              </Select>
-              <Textarea
-                className="h-[200px]"
-                placeholder="Type your message here."
-              />
-              <Button size="md" className="max-w-40">
-                Send
-              </Button>
-            </form> */}
-          </div>
+          <div className="xl:h-[54%] order-2 xl:order-none"></div>
           <div className="flex-1 flex items-center xl:justify-end order-1 xl:order-none mb-8 xl:mb-0">
             <ul className="flex flex-col gap-10">
               {info.map((item, index) => (
