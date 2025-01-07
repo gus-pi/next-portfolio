@@ -43,13 +43,24 @@ const projects = [
   {
     num: '03',
     category: 'frontend',
-    title: 'pet-soft',
+    title: 'Movie DB',
     description:
       'A frontend page that displays movies using an existing movie database.',
     stack: [{ name: 'next.js' }, { name: 'typescript' }],
     image: '/assets/work/thumb3.PNG',
     live: 'https://next-moviedb.netlify.app',
     github: 'https://github.com/gus-pi/next-moviesdb',
+  },
+  {
+    num: '04',
+    category: 'frontend',
+    title: 'e-store',
+    description:
+      'An e-commerce electronic shop with user roles with a json-server backend',
+    stack: [{ name: 'react' }, { name: 'typescript' }],
+    image: '/assets/work/thumb4.PNG',
+    live: 'https://elec-store.netlify.app',
+    github: 'https://github.com/gus-pi/e-store',
   },
 ];
 
