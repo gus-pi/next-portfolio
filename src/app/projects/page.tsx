@@ -32,13 +32,13 @@ const projects = [
   {
     num: '02',
     category: 'fullstack',
-    title: 'next-expenses',
+    title: 'vestiti e-shop',
     description:
-      'A fullstack app to manage personal expenses. Uses clerk for authentication.',
-    stack: [{ name: 'next.js' }, { name: 'typescript' }, { name: 'mongodb' }],
-    image: '/assets/work/thumb2.PNG',
-    live: 'https://next-expenses-blond.vercel.app',
-    github: 'https://github.com/gus-pi/next-expenses',
+      'A fullstack e-commerce page for a clothes and accesories store.',
+    stack: [{ name: 'MERN' }, { name: 'typescript' }, { name: 'mongodb' }],
+    image: '/assets/work/thumb5.png',
+    live: 'https://evestiti-frontend.vercel.app/',
+    github: 'https://github.com/gus-pi/evestiti',
   },
   {
     num: '03',
@@ -61,6 +61,17 @@ const projects = [
     image: '/assets/work/thumb4.PNG',
     live: 'https://elec-store.netlify.app',
     github: 'https://github.com/gus-pi/e-store',
+  },
+  {
+    num: '05',
+    category: 'fullstack',
+    title: 'next-expenses',
+    description:
+      'A fullstack app to manage personal expenses. Uses clerk for authentication.',
+    stack: [{ name: 'next.js' }, { name: 'typescript' }, { name: 'mongodb' }],
+    image: '/assets/work/thumb2.PNG',
+    live: 'https://next-expenses-blond.vercel.app',
+    github: 'https://github.com/gus-pi/next-expenses',
   },
 ];
 
